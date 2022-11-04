@@ -77,8 +77,8 @@ function renderLicenseSection(license) {
     ## Questions
     If you have questions, please reach out via email or my GitHub account.
     * GitHub: [${data.github}](https://github.com/${data.github})
-     * E-mail: [${data.email}](mailto:${data.email})
-     `;
+    * E-mail: [${data.email}](mailto:${data.email})
+    `;
 }
     
 
