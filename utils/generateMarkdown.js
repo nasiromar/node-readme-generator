@@ -37,3 +37,48 @@ function renderLicenseLink(license) {
   }
 };
 
+function renderLicenseSection(license) {
+    if (license) {
+      return `${renderLicenseLink(license)}`
+    }
+    return '';
+  }
+  
+
+  function generateMarkdown(data) {
+    return `
+    # ${data.title}  
+    ${renderLicenseBadge(data.license)}  
+    ## Description
+    ${data.description}
+    [Deployed link](${data.link})
+    ## Table of Contents
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [Contribution](#contribution)
+    * [Tests](#tests)
+    * [Credits](#credits)
+    * [License](#license)
+    * [Questions](#questions)
+    ## Installation
+    ${data.installation}
+    ## Usage
+    ${data.usage}
+    ![Project Screenshot](/assets/images/${data.screenshot})
+    ## Contribution
+    ${data.contribution}
+    ## Tests
+    ${data.test}
+    ## Credits
+    ${data.credits}
+    ## License
+    ${renderLicenseSection(data.license)}
+
+    ## Questions
+    If you have questions, please reach out via email or my GitHub account.
+    * GitHub: [${data.github}](https://github.com/${data.github})
+     * E-mail: [${data.email}](mailto:${data.email})
+     `;
+}
+    
+
