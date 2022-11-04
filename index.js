@@ -30,13 +30,25 @@ const questions = [{
         type: 'input',
         message: 'how to run tests?',
         name: 'test'
+},  {
+        type: "confirm",
+        name: "linkProject",
+        message: "Do you want to add a link for the project",
+        default: true,
+}, {
+        type: "input",
+        name: "link",
+        message: "Enter the link",
+         when: ({ linkProject }) => linkProject
+
 },  {       
          type: 'input',
          message: 'how to use the repo and app?',
         name: 'usage'
-},  {   
-        
-        type: 'input',
+
+}, {
+
+       type: 'input',
         message: 'how to contribute to the development?',
         name: 'contribution'
 },  {

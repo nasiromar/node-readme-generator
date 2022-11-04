@@ -82,3 +82,4 @@ function renderLicenseSection(license) {
 }
     
 
+module.exports = generateMarkdown;
